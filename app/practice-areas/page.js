@@ -1,7 +1,4 @@
 import { PracticeAreasHero } from '@/components/practice-areas/PracticeAreasHero'
-import { DetailedPracticeAreas } from '@/components/practice-areas/DetailedPracticeAreas'
-import { ExpertiseHighlight } from '@/components/practice-areas/ExpertiseHighlight'
-import { ContactCTA } from '@/components/shared/ContactCTA'
 
 export default function PracticeAreas() {
   return (

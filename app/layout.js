@@ -2,23 +2,24 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
+import { ThemeProvider } from '@/components/providers/ThemeProvider'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Justice Law Firm',
-  description: 'Expert legal services for all your needs',
+  description: 'Expert legal services for your needs',
 }
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={`${inter.className} bg-white`}>
-        <Header />
-        <div className="pt-20">
+    <html lang="en" suppressHydrationWarning>
+      <body className={inter.className}>
+        <ThemeProvider>
+          <Header />
           {children}
-        </div>
-        <Footer />
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   )

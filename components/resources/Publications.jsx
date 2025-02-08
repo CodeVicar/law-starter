@@ -40,7 +40,7 @@ export function Publications() {
   ]
 
   return (
-    <section className="bg-white py-24">
+    <section className="bg-white dark:bg-gray-900 py-24 transition-colors duration-200">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -49,10 +49,11 @@ export function Publications() {
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-2xl text-center"
         >
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+          <h2 className="text-base font-semibold leading-7 text-blue-600 dark:text-blue-400">Resources</h2>
+          <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
             Legal Resources & Publications
-          </h2>
-          <p className="mt-6 text-lg leading-8 text-gray-600">
+          </p>
+          <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">
             Access our comprehensive collection of legal guides, handbooks, and resources designed to help you understand your legal rights and obligations.
           </p>
         </motion.div>
@@ -67,24 +68,24 @@ export function Publications() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="relative group"
             >
-              <div className="relative p-8 h-full rounded-2xl border border-gray-200 bg-white shadow-sm hover:shadow-lg transition-all duration-300">
+              <div className="relative p-8 h-full rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 shadow-sm hover:shadow-lg transition-all duration-300">
                 <div className="flex items-center gap-x-4">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-600 text-white">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-600 dark:bg-blue-500 text-white">
                     {resource.icon}
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-900">
+                    <h3 className="text-lg font-semibold leading-8 tracking-tight text-gray-900 dark:text-white">
                       {resource.title}
                     </h3>
-                    <p className="text-sm text-blue-600">{resource.type}</p>
+                    <p className="text-sm text-blue-600 dark:text-blue-400">{resource.type}</p>
                   </div>
                 </div>
-                <p className="mt-4 text-base leading-7 text-gray-600">
+                <p className="mt-4 text-base leading-7 text-gray-600 dark:text-gray-300">
                   {resource.description}
                 </p>
                 <Link
                   href={resource.downloadUrl}
-                  className="mt-6 inline-flex items-center text-sm font-semibold text-blue-600 hover:text-blue-500"
+                  className="mt-6 inline-flex items-center text-sm font-semibold text-blue-600 dark:text-blue-400 hover:text-blue-500 dark:hover:text-blue-300"
                 >
                   Download PDF
                   <svg className="ml-2 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
